@@ -1,0 +1,366 @@
+🔹 BASIC LEVEL (1–10)
+1️⃣ What is Postman?
+
+Answer:
+
+Postman is an API development and testing tool used to send HTTP requests and validate API responses.
+
+Interview Style Answer:
+“In my project, I use Postman to test REST APIs by validating status codes, response body, headers, authentication, and response time. I also automate API flows using collections and scripts.”
+
+2️⃣ What are Collections in Postman?
+
+Answer:
+
+A Collection is a group of related API requests organized together.
+
+Explanation:
+It helps in:
+
+Grouping APIs module-wise
+
+Running them in sequence
+
+Automating via Collection Runner/Newman
+
+3️⃣ What are Environment Variables?
+
+Answer:
+
+Environment variables store dynamic values like:
+
+baseURL
+
+token
+
+userId
+
+They change based on Dev, QA, Prod environments.
+
+4️⃣ Difference between Environment and Global Variables?
+
+Answer:
+
+Environment	Global
+Specific to selected environment	Available everywhere
+Safer for multi-env projects	Can cause conflicts
+
+“I prefer environment variables in real projects.”
+
+5️⃣ What HTTP methods does Postman support?
+
+Answer:
+
+GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD.
+
+Each method serves a purpose in CRUD operations.
+
+6️⃣ Difference between GET and POST?
+
+Answer:
+
+GET → Fetch data
+
+POST → Create new data
+
+GET does not have body. POST sends body payload.
+
+7️⃣ Difference between PUT and PATCH?
+
+Answer:
+
+PUT → Updates entire resource
+
+PATCH → Updates partial fields only
+
+Example:
+PUT requires full object.
+PATCH updates only email.
+
+8️⃣ How do you pass query parameters?
+
+Answer:
+
+Use Params tab or add:
+
+/users?id=101&status=active
+9️⃣ How do you send headers?
+
+Answer:
+
+Use Headers tab.
+Example:
+
+Content-Type: application/json
+
+Authorization: Bearer token
+
+🔟 What are common HTTP status codes?
+
+Answer:
+
+200 → Success
+
+201 → Created
+
+400 → Bad Request
+
+401 → Unauthorized
+
+403 → Forbidden
+
+404 → Not Found
+
+500 → Internal Server Error
+
+🔹 INTERMEDIATE (11–20)
+11️⃣ What is Pre-request Script?
+
+Answer:
+
+Script that runs before API execution.
+
+Used for:
+
+Setting variables
+
+Generating random data
+
+Token setup
+
+12️⃣ What is Test Script?
+
+Answer:
+
+Script that runs after response is received.
+
+Used to validate:
+
+Status code
+
+Body
+
+Headers
+
+Response time
+
+13️⃣ What is pm object?
+
+Answer:
+
+pm is Postman’s scripting interface.
+
+Common usages:
+
+pm.response
+
+pm.environment
+
+pm.test
+
+pm.expect
+
+14️⃣ How do you validate status code?
+pm.test("Status is 200", function () {
+    pm.response.to.have.status(200);
+});
+15️⃣ How do you validate response time?
+pm.test("Response time < 800ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(800);
+});
+16️⃣ How do you extract response value?
+let data = pm.response.json();
+pm.environment.set("userId", data.id);
+17️⃣ How do you pass dynamic data between APIs?
+
+Store value in environment variable → Use {{variable}} in next API.
+
+18️⃣ What are Collection Variables?
+
+Variables limited to that collection only.
+
+Good for module-specific values.
+
+19️⃣ What is variable scope order?
+
+Local → Data → Environment → Collection → Global
+
+20️⃣ How do you handle authentication token?
+
+Login API → Extract token → Store in environment → Use in header.
+
+🔹 ADVANCED (21–30)
+21️⃣ How do you handle OAuth 2.0?
+
+Configured under Authorization tab.
+Postman auto-fetches access token.
+
+22️⃣ How do you automate APIs?
+
+Using Collection Runner.
+
+23️⃣ What is Collection Runner?
+
+Tool inside Postman to run collection sequentially.
+
+24️⃣ What is Data File?
+
+CSV/JSON file used for data-driven testing.
+
+25️⃣ Difference between Collection Runner and Newman?
+
+Runner → GUI
+Newman → CLI for CI/CD
+
+26️⃣ What is Newman?
+
+CLI tool to run Postman collections outside Postman.
+
+27️⃣ How do you integrate with CI/CD?
+
+Export collection → Run using Newman in Jenkins pipeline.
+
+28️⃣ How do you generate reports?
+
+Using Newman HTML reporters.
+
+29️⃣ How do you parameterize requests?
+
+Use variables:
+
+{{baseURL}}/users/{{id}}
+30️⃣ How do you handle dependent APIs?
+
+Extract ID from first API → Store → Use in second API.
+
+🔹 SCRIPTING (31–40)
+31️⃣ Validate status 200?
+
+(Already shown above)
+
+32️⃣ Validate response <500ms?
+
+(Already shown above)
+
+33️⃣ Validate JSON key value?
+pm.expect(pm.response.json().name).to.eql("Ajay");
+34️⃣ Validate nested JSON?
+pm.response.json().user.profile.email
+35️⃣ Loop through array?
+let data = pm.response.json();
+data.forEach(item => console.log(item.id));
+36️⃣ How do you validate JSON schema?
+pm.response.to.have.jsonSchema(schema);
+37️⃣ Conditional testing?
+if(pm.response.code === 200){
+   pm.test("Success", function(){
+      pm.expect(true).to.eql(true);
+   });
+}
+38️⃣ Generate random data?
+Math.floor(Math.random()*1000)
+39️⃣ Set variable dynamically?
+pm.environment.set("email", "test@gmail.com");
+40️⃣ Clear variable?
+pm.environment.unset("email");
+🔹 SCENARIO BASED (41–50)
+41️⃣ Login + Dashboard flow?
+
+Login first → Save token → Call dashboard with token.
+
+42️⃣ Token expires every 30 mins?
+
+Keep login request first in collection.
+Regenerate token before execution.
+
+43️⃣ Random 500 error?
+
+Check:
+
+Payload
+
+Headers
+
+Logs
+
+Retry scenario
+
+44️⃣ Validate large response?
+
+Validate key fields, not full payload.
+
+45️⃣ Negative testing?
+
+Test:
+
+Invalid input
+
+Missing fields
+
+Expired token
+
+46️⃣ File upload API?
+
+Use form-data → select file.
+
+47️⃣ File download API?
+
+Validate:
+
+200 status
+
+Content-Type header
+
+48️⃣ Handle 429 error?
+
+Validate retry logic and error message.
+
+49️⃣ Run APIs sequentially?
+
+Arrange inside collection → Use Runner.
+
+50️⃣ Version control collections?
+
+Export JSON → Push to Git repository.
+
+🔹 EXPERT (51–60)
+51️⃣ What is Mock Server?
+
+Simulates API without backend.
+
+52️⃣ What are Monitors?
+
+Scheduled automated runs in cloud.
+
+53️⃣ How do you schedule API runs?
+
+Using Postman Monitors.
+
+54️⃣ What is Postman Flows?
+
+Visual workflow builder for APIs.
+
+55️⃣ Postman CLI vs Newman?
+
+Postman CLI → Official newer tool
+Newman → Older CLI runner
+
+56️⃣ Dynamic base URL?
+
+Store in environment:
+
+{{baseURL}}
+57️⃣ How do you secure sensitive data?
+
+Use environment variables instead of hardcoding.
+
+58️⃣ How do you test GraphQL APIs?
+
+Use POST method → GraphQL query in body.
+
+59️⃣ How do you test SOAP APIs?
+
+Send raw XML body + SOAP headers.
+
+60️⃣ How do you validate response headers?
+pm.response.to.have.header("Content-Type");
