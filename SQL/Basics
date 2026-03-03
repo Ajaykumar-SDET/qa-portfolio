@@ -1,0 +1,183 @@
+🔹 1. Basic SQL Terms
+
+Database – Organized collection of data
+DBMS – Database Management System
+RDBMS – Relational Database Management System
+Table – Collection of rows and columns
+Row / Record / Tuple – Single entry in a table
+Column / Field / Attribute – Single data element
+Schema – Structure of database objects
+Instance – Actual data stored at a given time
+
+🔹 2. SQL Command Categories
+📌 DDL (Data Definition Language)
+Used to define structure
+CREATE
+ALTER
+DROP
+TRUNCATE
+RENAME
+COMMENT
+
+📌 DML (Data Manipulation Language)
+Used to modify data
+INSERT
+UPDATE
+DELETE
+MERGE
+
+📌 DQL (Data Query Language)
+SELECT
+
+📌 DCL (Data Control Language)
+GRANT
+REVOKE
+
+📌 TCL (Transaction Control Language)
+COMMIT
+ROLLBACK
+SAVEPOINT
+SET TRANSACTION
+
+🔹 3. Constraints
+PRIMARY KEY
+FOREIGN KEY
+UNIQUE
+NOT NULL
+CHECK
+DEFAULT
+AUTO_INCREMENT (MySQL)
+IDENTITY (SQL Server)
+
+🔹 4. Keys
+Primary Key
+Foreign Key
+Candidate Key
+Super Key
+Composite Key
+Alternate Key
+
+🔹 5. Joins
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+FULL JOIN
+CROSS JOIN
+SELF JOIN
+
+🔹 6. Clauses
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+DISTINCT
+TOP (SQL Server)
+LIMIT (MySQL/PostgreSQL)
+OFFSET
+
+🔹 7. Aggregate Functions
+COUNT()
+SUM()
+AVG()
+MIN()
+MAX()
+
+🔹 8. String Functions
+UPPER()
+LOWER()
+LENGTH()
+SUBSTRING()
+TRIM()
+REPLACE()
+CONCAT()
+
+🔹 9. Date Functions
+NOW()
+CURDATE()
+DATEDIFF()
+DATEADD()
+EXTRACT()
+
+🔹 10. OperatorsComparison
+=
+!=
+<>
+>
+<
+>=
+<=
+Logical
+AND
+OR
+NOT
+Special
+IN
+BETWEEN
+LIKE
+IS NULL
+EXISTS
+ANY
+ALL
+
+🔹 11. Advanced Concepts (Important for QA Interviews)
+Index
+Clustered Index
+Non-clustered Index
+View
+Materialized View
+Stored Procedure
+Function
+Trigger
+Cursor
+Subquery
+Correlated Subquery
+CTE (Common Table Expression)
+Window Functions
+Partitioning
+Normalization
+Denormalization
+ACID Properties
+Deadlock
+Locking
+Isolation Levels
+
+🔹 12. Window Functions
+
+ROW_NUMBER()
+RANK()
+DENSE_RANK()
+LEAD()
+LAG()
+OVER()
+PARTITION BY
+
+🔹 13. Normalization Forms
+1NF
+2NF
+3NF
+BCNF
+4NF
+5NF
+
+🔹 14. Data Types
+Numeric
+INT
+BIGINT
+DECIMAL
+FLOAT
+DOUBLE
+String
+CHAR
+VARCHAR
+TEXT
+Date/Time
+DATE
+TIME
+DATETIME
+TIMESTAMP
+Others
+BOOLEAN
+BLOB
+JSON
+
+ENUM
