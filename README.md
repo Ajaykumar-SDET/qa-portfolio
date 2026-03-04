@@ -6,8 +6,8 @@ It includes end‑to‑end QA artifacts, automation scripts, interview preparati
 ---
 
 ## 🔍 **About Me**
-I am a QA Engineering Professional with experience in **manual testing**, **defect management**, **test case design**, and **API testing**, and I am actively upskilling in **test automation** using Selenium, TestNG, and Rest Assured.  
-This repository helps me track my progress and demonstrate my contributions.
+Detail-oriented Automation Test Engineer with around 4 years of experience in automation, manual and functional testing of web and API applications. Proficient in designing, developing and executing automated test scripts using Selenium. Skilled in Java, Python with a strong background in API testing with Postman & Rest Assured, CI/CD and Agile methodologies.
+Passionate about delivering high quality software through Cucumber, Pytest and TDD, TestNG and JUnit automation frameworks.
 
 ---
 
