@@ -1,0 +1,94 @@
+AI Tools for QA Engineers
+Test Case Generation & Requirement Analysis
+
+ChatGPT
+Used for generating functional test cases, edge cases, and exploratory testing scenarios from product requirements.
+
+Claude
+Helps analyze complex product flows and generate detailed QA test strategies.
+
+Perplexity
+Used to research technical issues, API errors, and framework documentation with referenced sources.
+
+Google Gemini
+Supports requirement analysis, test case generation, and documentation creation.
+
+Notion AI
+Used for documenting test cases, bug reports, and QA documentation efficiently.
+
+Test Automation & Script Generation
+
+GitHub Copilot
+Helps generate automation scripts for Selenium, Cypress, and API testing frameworks.
+
+Testim
+AI-powered automation tool with self-healing UI tests and intelligent test maintenance.
+
+Mabl
+Automates UI testing using machine learning and visual regression detection.
+
+Functionize
+Creates automated UI tests using natural language commands.
+
+Replit
+Used for writing and debugging automation scripts in real time.
+
+API Testing & Backend Validation
+
+Postman
+Supports API test creation, automated API validation, and request collections.
+
+Hoppscotch
+Lightweight API testing tool useful for quick endpoint validation.
+
+Swagger
+Helps QA engineers test API endpoints directly from documentation.
+
+Bug Investigation & Debugging
+
+Sentry
+Helps track production errors, analyze stack traces, and debug application issues.
+
+LogRocket
+Provides session replay and detailed logs to analyze user issues.
+
+Datadog
+Used for performance monitoring, log analysis, and debugging distributed systems.
+
+AI-Based Visual & UI Testing
+
+Applitools
+Uses visual AI to detect UI differences and visual bugs across browsers and devices.
+
+Percy
+Automated visual regression testing platform for web applications.
+
+Test Data Generation
+
+Faker
+Generates realistic synthetic data such as names, emails, and addresses for testing.
+
+Mockaroo
+Creates large datasets for validating database and API test scenarios.
+
+Productivity & QA Workflow Tools
+
+Fireflies.ai
+Automatically records and summarizes testing discussions and team meetings.
+
+NotebookLM
+Summarizes requirement documents and extracts key insights for testing.
+
+Granola
+Organizes QA meeting notes and project discussions.
+
+Crystal
+Improves communication with stakeholders by analyzing communication styles.
+
+Benefits of AI in QA
+Faster test case generation
+Improved test coverage and edge case discovery
+Faster root cause analysis
+AI-assisted automation script creation
+Better bug reporting and documentation
+Increased testing productivity
